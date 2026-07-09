@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: dotted;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  align-items: center;
+}
+
+nav>ul>li {
+  margin: 0;
+  padding: 4px 10px;
+  position: relative;
+  font-size: 1.3rem;
+  height: 100%;
+}

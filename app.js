@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(5500, () => {
-  console.log('Server running on port 5500');
+app.listen(6700, () => {
+  console.log('Server running on port 6700');
 });
