@@ -44,7 +44,7 @@ div#intro>h1 {
   background-clip: text;
   -webkit-background-clip: text;
 
-  font-size: clamp(30px, 6vw, 500px);
+  font-size: clamp(30px, 6vmax, 500px);
   text-align: center;
 
   animation: glow 3.5s infinite linear, hover 4s infinite ease-in-out;
