@@ -7,11 +7,11 @@ li>a {
   color: cyan;
   text-shadow: 0px 0px 5px skyblue;
   font-size: 2vw;
+  transition-duration: 300ms;
 }
 
 body {
   margin: 0;
-  background-color: skyblue;
   overflow-x: hidden;
 }
 
@@ -97,6 +97,14 @@ nav>ul>li {
   transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
+.hidden-text {
+  opacity: 0;
+  filter: blur (2px);
+  transform: translateY(40px);
+  transition: all var(--delay);
+  transition-timing-function: ease-in;
+}
+
 .show {
   opacity: 1;
   filter: blur(0);
@@ -108,19 +116,38 @@ nav>ul>li {
   top: 25vh;
 }
 
-section#hero_section {
+section#introduction-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(rgb(80, 0, 170), purple);
+}
+
+section#introduction-section>img {
+  border-radius: 15px;
+  animation: hover 3.23s infinite ease-in-out;
+  width: clamp(100px, 25vw, 500px)
 }
 
 hr {
   margin: 0;
-  border: 2px outset grey;
+  border: 5px outset grey;
 }
 
 h1 {
   font-size: clamp(30px, 6vw, 500px);
   text-align: center;
+}
+
+div.introduction-text>p {
+  font-size: clamp(1.5rem, 1.7vmax, 4rem);
+  margin-bottom: 30px;
+  font-family: Roboto;
+  color: white;
+  text-shadow: 0px 0px 5px rgb(40, 40, 40);
+}
+
+div.introduction-text {
+  width: 50vw;
 }
 
 @keyframes glow {
@@ -142,5 +169,23 @@ h1 {
 
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 950px) {
+  section#introduction-section {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  section#introduction-section>div {
+    font-size: 7vw;
+    text-align: center;
+    width: 80%;
+  }
+
+  section#introduction-section>img {
+    width: 65vw;
+    margin-bottom: 60px;
   }
 }
