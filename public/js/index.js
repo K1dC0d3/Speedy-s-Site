@@ -24,8 +24,8 @@ window.addEventListener("scroll", (e) => {
 
   if (isInView) {
     navText.forEach((link) => {
-      link.style.color = "violet";
-      link.style.textShadow = "0px 0px 5px violet";
+      link.style.color = "rgba(150, 100, 255)";
+      link.style.textShadow = "0px 0px 5px rgba(120, 0, 190)";
     });
   } else {
     navText.forEach((link) => {

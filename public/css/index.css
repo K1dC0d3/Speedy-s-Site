@@ -116,21 +116,31 @@ nav>ul>li {
   top: 25vh;
 }
 
-section#introduction-section {
+section.body {
   width: 100%;
   min-height: 100vh;
+}
+
+section.body>img {
+  border-radius: 15px;
+  width: clamp(100px, 25vw, 500px)
+}
+
+section#introduction-section {
   background: linear-gradient(rgb(80, 0, 170), purple);
 }
 
+section#the-imagination {
+  background: linear-gradient(300deg, rgb(50, 0, 140), #112 40%);
+}
+
 section#introduction-section>img {
-  border-radius: 15px;
   animation: hover 3.23s infinite ease-in-out;
-  width: clamp(100px, 25vw, 500px)
 }
 
 hr {
   margin: 0;
-  border: 5px outset grey;
+  border: 4px outset grey;
 }
 
 h1 {
@@ -187,5 +197,37 @@ div.introduction-text {
   section#introduction-section>img {
     width: 65vw;
     margin-bottom: 60px;
+  }
+}
+
+.appear {
+  left: 77dvw !important;
+}
+
+@media (max-width: 700px) {
+  button#closeNav {
+    display: block
+  }
+
+  button#openNav {
+    display: block;
+  }
+
+  .list {
+    top: 0;
+    left: 100dvw;
+    height: min-content;
+    flex-direction: column;
+    width: 23vw;
+    padding-left: 50px;
+    align-items: flex-end;
+    height: 100vh;
+    background-color: rgb(2, 2, 44);
+    justify-content: normal;
+  }
+
+  .list>a {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
