@@ -129,12 +129,12 @@ section.body>div.text {
 section.body>div.text>p {
   font-size: clamp(1.5rem, 1.7vmax, 4rem);
   margin-bottom: 30px;
-  font-family: Roboto;
+  font-family: Comic Sans MS;
   color: white;
   text-shadow: 0px 0px 5px rgb(40, 40, 40);
 }
 
-section.body>img {
+section.body img {
   border-radius: 15px;
   width: clamp(100px, 25vw, 500px)
 }
@@ -166,7 +166,7 @@ h1 {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   touch-action: pan-y;
 }
 
@@ -193,11 +193,11 @@ h1 {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: white;
+  background-color: white;
 }
 
 .slide-dots button.active {
-  background: blue;
+  background-color: blue;
 }
 
 @keyframes glow {
@@ -228,6 +228,11 @@ h1 {
     flex-direction: column;
   }
 
+  .slide-dots {
+    bottom: auto;
+    top: 20px;
+  }
+
   section#introduction-section {
     flex-direction: column-reverse;
     padding-top: 60px;
@@ -239,7 +244,7 @@ h1 {
     width: 80%;
   }
 
-  section.body>img {
+  section.body img {
     width: 65vw;
     margin-bottom: 60px;
   }
