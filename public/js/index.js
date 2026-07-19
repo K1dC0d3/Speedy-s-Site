@@ -48,6 +48,9 @@ function goToSlide(index) {
 
   dots.forEach(dot => dot.classList.remove("active"));
   dots[current].classList.add("active");
+
+  // Match carousel height to current slide
+  carousel.style.height = `${slides.children[current].offsetHeight}px`;
 }
 
 dots.forEach((dot, index) => {
@@ -92,3 +95,13 @@ carousel.addEventListener("touchend", () => {
     goToSlide(current);
   }
 });
+
+let autoSlide = setInterval(() => {
+  current++;
+
+  if (current >= slides.children.length) {
+    current = 0;
+  }
+
+  goToSlide(current);
+}, 8000);
