@@ -18,12 +18,25 @@
     <video autoplay muted loop id="myVideo">
       <source src="/assets/background1.mp4" type="video/mp4">
     </video>
-    <nav class="d-flex justify-content-end">
+    <button id="openNav" onclick="openNav()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="12" x2="20" y2="12"></line>
+        <line x1="4" y1="6" x2="20" y2="6"></line>
+        <line x1="4" y1="18" x2="20" y2="18"></line>
+      </svg>
+    </button>
+    <nav class="d-flex">
       <ul>
+        <button id="closeNav" onclick="closeNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
         <li><a href="/book-series">Books</a></li>
-        <li><a href="/book-series">Characters</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/about">About Me</a></li>
+        <li><a href="/characters">Characters</a></li>
+        <li><a href="#about" onclick="closeNav()">About Me</a></li>
       </ul>
     </nav>
     <div class="d-flex justify-content-center align-items-center flex-column" id="intro">
@@ -88,14 +101,14 @@
           <div>
             <img alt="The Imagination" src="./assets/IMG-20260710-WA0042.jpg">
             <p class="text-secondary text-center">Released May 2026<br>Available on <a
-                class="text-decoration-none fst-italic" style="color: orange;"
+                class="text-decoration-none fst-italic" target="_blank" style="color: orange;"
                 href="https://www.wattpad.com/story/410113904-the-imagination">Wattpad</a></p>
             <p class="text-white text-center fs-5">The Imagination</p>
           </div>
           <div class="wrap text">
             <p class="hidden-text fs-4">The Battle Between Imagination and Reality</p>
             <p class="hidden-text fs-4">After discovering a portal behind their school wall, a group of teenagers are
-              pulled into the Imaginarium, a massive animated dimesnion built from human imagination itself.</p>
+              pulled into the Imaginarium, a massive animated dimension built from human imagination itself.</p>
             <p class="hidden-text fs-4">Chosen as Guardians of Imagination, they must travel through unstable
               mindscapes, stop psychological disasters, and battle The Reality, a force determined to erase creativity
               forever</p>
@@ -105,7 +118,7 @@
     </section>
   </main>
   <hr>
-  <footer>
+  <footer id="about">
     <h1>About The Author</h1>
     <section>
       <div>

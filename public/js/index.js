@@ -1,5 +1,6 @@
 const navText = document.querySelectorAll("li>a");
 const introductionSection = document.getElementById("introduction-section");
+const booksSection = document.querySelector(".carousel");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -18,14 +19,23 @@ hiddenText.forEach((p, index) => {
 hiddenElements.forEach((el) => observer.observe(el));
 hiddenText.forEach(el => observer.observe(el));
 
-window.addEventListener("scroll", (e) => {
-  const triggerRect = introductionSection.getBoundingClientRect();
-  const isInView = triggerRect.top < (window.innerHeight * 0.5) && triggerRect.bottom > 0;
+/* Above is the text animation loading thing */
 
-  if (isInView) {
+window.addEventListener("scroll", (e) => {
+  const introTriggerRect = introductionSection.getBoundingClientRect();
+  const booksTriggerRect = booksSection.getBoundingClientRect();
+  const introIsInView = introTriggerRect.top < (window.innerHeight * 0.5) && introTriggerRect.bottom > 0;
+  const booksIsInView = booksTriggerRect.top < (window.innerHeight * 0.5) && booksTriggerRect.bottom > 0;
+
+  if (introIsInView) {
     navText.forEach((link) => {
-      link.style.color = "rgba(150, 100, 255)";
+      link.style.color = "rgba(150, 170, 255)";
       link.style.textShadow = "0px 0px 5px rgba(120, 0, 190)";
+    });
+  } else if (booksIsInView) {
+    navText.forEach((link) => {
+      link.style.color = "white";
+      link.style.textShadow = "ghostwhite";
     });
   } else {
     navText.forEach((link) => {
@@ -34,6 +44,8 @@ window.addEventListener("scroll", (e) => {
     });
   }
 });
+
+/* The code above changes the colors of the links depending on what part of the page they are on */
 
 const carousel = document.querySelector(".carousel");
 const slides = document.querySelector(".slides");
@@ -71,28 +83,30 @@ carousel.addEventListener("touchmove", (e) => {
 });
 
 carousel.addEventListener("touchend", () => {
-  let difference = startX - endX;
+  if (!isDragging2) {
+    let difference = startX - endX;
 
-  // Swiped left
-  if (difference > 50) {
-    current++;
+    // Swiped left
+    if (difference > 50) {
+      current++;
 
-    if (current >= dots.length) {
-      current = dots.length - 1;
+      if (current >= dots.length) {
+        current = dots.length - 1;
+      }
+
+      goToSlide(current);
     }
 
-    goToSlide(current);
-  }
+    // Swiped right
+    if (difference < -50) {
+      current--;
 
-  // Swiped right
-  if (difference < -50) {
-    current--;
+      if (current < 0) {
+        current = 0;
+      }
 
-    if (current < 0) {
-      current = 0;
+      goToSlide(current);
     }
-
-    goToSlide(current);
   }
 });
 
@@ -104,4 +118,59 @@ let autoSlide = setInterval(() => {
   }
 
   goToSlide(current);
-}, 8000);
+}, 8500);
+
+let startX2 = 0;
+let endX2 = 0;
+let isDragging2 = false;
+
+carousel.addEventListener("pointerdown", (e) => {
+  startX2 = e.clientX;
+  isDragging2 = true;
+
+  carousel.setPointerCapture(e.pointerId);
+});
+
+carousel.addEventListener("pointermove", (e) => {
+  if (!isDragging2) return;
+
+  endX2 = e.clientX;
+});
+
+carousel.addEventListener("pointerup", () => {
+  if (!isDragging2) return;
+
+  const distance = startX2 - endX2;
+
+  if (distance > 50) {
+    current++;
+
+    if (current >= slides.children.length) {
+      current = slides.children.length - 1;
+    }
+
+    goToSlide(current);
+  }
+
+  if (distance < -50) {
+    current--;
+
+    if (current < 0) {
+      current = 0;
+    }
+
+    goToSlide(current);
+  }
+
+  isDragging2 = false;
+});
+
+const nav = document.querySelector("nav");
+
+function openNav() {
+  nav.classList.add("appear");
+}
+
+function closeNav() {
+  nav.classList.remove("appear");
+}

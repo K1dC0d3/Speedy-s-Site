@@ -16,6 +16,12 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
 header {
   width: 100%;
 }
@@ -67,9 +73,10 @@ video {
 
 nav {
   position: fixed;
+  justify-content: flex-end;
   width: 100%;
   background-color: white;
-  z-index: 4;
+  z-index: 5;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -142,7 +149,7 @@ section.body img {
 }
 
 section#introduction-section {
-  background: linear-gradient(rgb(80, 0, 170), purple);
+  background: linear-gradient(rgb(20, 0, 150), black);
 }
 
 section#introduction-section>img {
@@ -168,6 +175,11 @@ h1 {
   touch-action: pan-y;
   transition: height .5s ease;
   background: linear-gradient(300deg, rgb(50, 0, 140), #112 40%);
+  cursor: grab;
+}
+
+.carousel:active {
+  cursor: grabbing;
 }
 
 .slides {
@@ -195,10 +207,41 @@ h1 {
   border: none;
   cursor: pointer;
   background-color: white;
+  transition: all 0.3s ease;
 }
 
 .slide-dots button.active {
   background-color: blue;
+}
+
+svg {
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+button#openNav {
+  width: 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 4;
+  border: none;
+  background: transparent;
+}
+
+button#closeNav {
+  width: 50px;
+  position: relative;
+  display: none;
+  z-index: 4;
+  border: none;
+  background: transparent;
+}
+
+nav.appear {
+  transform: translateX(-100%);
 }
 
 @keyframes glow {
@@ -224,6 +267,34 @@ h1 {
 }
 
 @media (max-width: 950px) {
+
+  button#openNav,
+  button#closeNav {
+    display: block;
+  }
+
+  nav {
+    top: 0;
+    left: 100dvw;
+    width: 40vw;
+    height: 100vh;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+
+  nav>ul {
+    flex-direction: column;
+    justify-content: normal;
+    align-items: flex-start;
+  }
+
+  nav>ul>li>a {
+    font-size: 5vw;
+  }
+
   section.body {
     padding-top: 60px;
     flex-direction: column;
@@ -259,10 +330,7 @@ h1 {
   }
 }
 
-.appear {
-  left: 77dvw !important;
-}
-
+/*
 @media (max-width: 700px) {
   button#closeNav {
     display: block
@@ -290,3 +358,4 @@ h1 {
     padding-bottom: 5px;
   }
 }
+  */
