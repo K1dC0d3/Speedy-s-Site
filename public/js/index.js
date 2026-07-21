@@ -30,17 +30,17 @@ window.addEventListener("scroll", (e) => {
   if (introIsInView) {
     navText.forEach((link) => {
       link.style.color = "rgba(160, 170, 255)";
-      link.style.textShadow = "0px 0px 5px rgba(120, 0, 170)";
+      link.style.textShadow = "0px 0px 3px rgba(120, 0, 170)";
     });
   } else if (booksIsInView) {
     navText.forEach((link) => {
       link.style.color = "white";
-      link.style.textShadow = "ghostwhite";
+      link.style.textShadow = "0px 0px 3px ghostwhite";
     });
   } else {
     navText.forEach((link) => {
       link.style.color = "skyblue";
-      link.style.textShadow = "0px 0px 5px skyblue";
+      link.style.textShadow = "0px 0px 3px skyblue";
     });
   }
 });
