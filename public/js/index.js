@@ -29,8 +29,8 @@ window.addEventListener("scroll", (e) => {
 
   if (introIsInView) {
     navText.forEach((link) => {
-      link.style.color = "rgba(150, 170, 255)";
-      link.style.textShadow = "0px 0px 5px rgba(120, 0, 190)";
+      link.style.color = "rgba(160, 170, 255)";
+      link.style.textShadow = "0px 0px 5px rgba(120, 0, 170)";
     });
   } else if (booksIsInView) {
     navText.forEach((link) => {
@@ -123,41 +123,40 @@ let autoSlide = setInterval(() => {
 let startX2 = 0;
 let endX2 = 0;
 let isDragging2 = false;
+let hasMoved2 = false;
 
 carousel.addEventListener("pointerdown", (e) => {
-  startX2 = e.clientX;
-  isDragging2 = true;
+  if (e.pointerType !== "mouse") return;
 
-  carousel.setPointerCapture(e.pointerId);
+  startX2 = e.clientX;
+  endX2 = startX2;
+  isDragging2 = true;
+  hasMoved2 = false;
 });
 
 carousel.addEventListener("pointermove", (e) => {
   if (!isDragging2) return;
 
   endX2 = e.clientX;
+
+  if (Math.abs(startX2 - endX2) > 10) {
+    hasMoved2 = true;
+  }
 });
 
 carousel.addEventListener("pointerup", () => {
   if (!isDragging2) return;
 
-  const distance = startX2 - endX2;
+  let distance = startX2 - endX2;
 
-  if (distance > 50) {
-    current++;
-
-    if (current >= slides.children.length) {
-      current = slides.children.length - 1;
+  if (Math.abs(distance) > 50) {
+    if (distance > 0) {
+      current++;
+    } else {
+      current--;
     }
 
-    goToSlide(current);
-  }
-
-  if (distance < -50) {
-    current--;
-
-    if (current < 0) {
-      current = 0;
-    }
+    current = Math.max(0, Math.min(current, slides.children.length - 1));
 
     goToSlide(current);
   }

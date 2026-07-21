@@ -166,6 +166,15 @@ h1 {
   text-align: center;
 }
 
+.latest-releases {
+  background: linear-gradient(300deg, rgb(50, 0, 140), #112 40%);
+  padding-top: 15px;
+}
+
+.latest-releases h1 {
+  margin-bottom: 15px;
+}
+
 .carousel {
   width: 100vw;
   min-height: 100vh;
@@ -174,7 +183,7 @@ h1 {
   overflow: hidden;
   touch-action: pan-y;
   transition: height .5s ease;
-  background: linear-gradient(300deg, rgb(50, 0, 140), #112 40%);
+  background: transparent;
   cursor: grab;
 }
 
