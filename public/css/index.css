@@ -108,8 +108,13 @@ nav>ul>li {
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateY(120%);
+  transform: translateY(10%);
   transition: all 1s;
+  transition-timing-function: ease-out;
+}
+
+.hidden-intro {
+  transform: translateY(120%);
   transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
@@ -136,6 +141,7 @@ section.body {
   min-width: 100%;
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 100px !important;
 }
 
 section.body>div.text {
@@ -261,6 +267,69 @@ nav.appear {
   transform: translateX(-100%);
 }
 
+footer {
+  background: #111;
+  color: white;
+  background: url("../assets/starry-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+footer img {
+  border-radius: 15px;
+  margin: 20px 10px;
+}
+
+section#about-author {
+  padding: 50px 30px;
+}
+
+p.abt-desc {
+  margin-top: 50px;
+  width: 500px;
+  font-size: 1.5rem;
+}
+
+.showcase {
+  margin-top: 50px;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+}
+
+.showcase>img {
+  width: 25vw;
+  margin: 0 20px;
+  object-fit: cover;
+}
+
+.discover-books {
+  position: absolute;
+  z-index: 5;
+
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 12px 25px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 1.2rem;
+
+  transition: .3s ease;
+}
+
+.discover-books:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
 @keyframes glow {
   from {
     background-position: 100% 50%;
@@ -288,6 +357,18 @@ nav.appear {
   button#openNav,
   button#closeNav {
     display: block;
+  }
+
+  div.showcase {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  div.showcase>img {
+    width: 80%;
+    margin: 20px;
   }
 
   nav {
@@ -341,38 +422,7 @@ nav.appear {
     margin-bottom: 60px;
   }
 
-  #section#the-imagination {
-    flex-direction: column-reverse;
+  section#the-imagination {
     padding-top: 60px;
   }
 }
-
-/*
-@media (max-width: 700px) {
-  button#closeNav {
-    display: block
-  }
-
-  button#openNav {
-    display: block;
-  }
-
-  .list {
-    top: 0;
-    left: 100dvw;
-    height: min-content;
-    flex-direction: column;
-    width: 23vw;
-    padding-left: 50px;
-    align-items: flex-end;
-    height: 100vh;
-    background-color: rgb(2, 2, 44);
-    justify-content: normal;
-  }
-
-  .list>a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
-  */

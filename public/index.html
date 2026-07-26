@@ -40,14 +40,15 @@
       </ul>
     </nav>
     <div class="d-flex justify-content-center align-items-center flex-column" id="intro">
-      <h3 class="text-center text-white fst-italic hidden" style="transition-duration: 1s !important;">Every Story
+      <h3 class="text-center text-white fst-italic hidden hidden-intro" style="transition-duration: 1s !important;">
+        Every Story
         Begins
         Somewhere
       </h3>
-      <h2 class="text-white hidden"
+      <h2 class="text-white hidden hidden-intro"
         style="transition-duration: 4s !important; font-size: 3vmax; transition-timing-function: cubic-bezier(0.75, 0.02, 0.27, 0.99);">
         Welcome to</h2>
-      <h1 class="hidden" style="transition-duration: 4.5s !important;">The Speed Verse</h1>
+      <h1 class="hidden hidden-intro" style="transition-duration: 4.5s !important;">The Speed Verse</h1>
     </div>
   </header>
   <hr>
@@ -74,6 +75,7 @@
           <button class="active"></button>
           <button></button>
         </div>
+        <button onclick="moreBooks()" class="discover-books">Discover More Books</button>
         <section class="slides">
           <section id="the-imagination"
             class="body d-flex justify-content-evenly align-items-center align-content-center p-5">
@@ -123,15 +125,32 @@
   </main>
   <hr>
   <footer id="about">
-    <h1>About The Author</h1>
-    <section>
+    <section id="about-author" class="d-flex flex-column align-items-center">
+      <h1 class="mb-3">Meet The Author</h1>
       <div>
-        <img src="" alt="">
-        <h2 style="text-align: start;">Aladesanmi Joshua</h2>
-
+        <img class="hidden" src="./assets/IMG-20260719-WA0070-EDIT.jpg" width=500 alt="">
+        <h2 style="font-size: 3rem;" class="text-center hidden">Aladesanmi Joshua</h2>
       </div>
-      <p>Aladesanmi Joshua is a storyteller passionate about the limitless power of imagination. His worlds blend
+
+      <p class="text-center abt-desc hidden-text" style="animation-timing-function: ease-out; transition-duration: 1s;">
+        Aladesanmi Joshua is a
+        storyteller passionate about the limitless
+        power of
+        imagination. His
+        worlds blend
         adventure, science fiction, and deep psychological themes to inspire readers to dream beyond reality.</p>
+
+      <p class="text-center abt-desc hidden-text" style="animation-timing-function: ease-out; transition-duration: 1s;">
+        He's also a video editor,
+        team leader and fun guy to be around.</p>
+
+      <div class="showcase d-flex">
+        <img class="hidden" src="./assets/IMG-20260719-WA0051.jpg" alt="">
+        <img class="hidden" style="transition-delay: 0.5s;" src="./assets/IMG-20260719-WA0075.jpg" alt="">
+        <img class="hidden" style="transition-delay: 1s;" src="./assets/IMG-20260719-WA0071.jpg" alt="">
+      </div>
+
+      <h2 class="fst-italic mt-5">"Go beyond... <strong>PLUS ULTRA</strong>"</h2>
     </section>
   </footer>
 

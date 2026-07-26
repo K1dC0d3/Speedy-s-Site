@@ -118,7 +118,7 @@ let autoSlide = setInterval(() => {
   }
 
   goToSlide(current);
-}, 8500);
+}, 10000);
 
 let startX2 = 0;
 let endX2 = 0;
@@ -172,4 +172,8 @@ function openNav() {
 
 function closeNav() {
   nav.classList.remove("appear");
+}
+
+function moreBooks() {
+  window.open("./books");
 }
