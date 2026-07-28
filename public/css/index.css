@@ -238,9 +238,7 @@ h1 {
 }
 
 svg {
-  color: white;
-  width: 100%;
-  height: 100%;
+  color: white !important;
 }
 
 button#openNav {
@@ -328,6 +326,19 @@ p.abt-desc {
 
 .discover-books:hover {
   transform: translateX(-50%) scale(1.05);
+}
+
+.hover {
+  animation-timing-function: ease-out !important;
+}
+
+.hover:hover {
+  transform: scale(1.3);
+  transform: translateY(-10px);
+}
+
+.handles * {
+  margin: 0 3px;
 }
 
 @keyframes glow {
@@ -424,5 +435,17 @@ p.abt-desc {
 
   section#the-imagination {
     padding-top: 60px;
+  }
+
+  section#about-author>h1 {
+    font-size: 50px;
+  }
+
+  section#about-author>p {
+    width: 85%;
+  }
+
+  section#about-author img:first-of-type {
+    width: 85%;
   }
 }

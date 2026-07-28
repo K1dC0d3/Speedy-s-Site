@@ -1,4 +1,5 @@
 const navText = document.querySelectorAll("li>a");
+const header = document.querySelector("header");
 const introductionSection = document.getElementById("introduction-section");
 const booksSection = document.querySelector(".carousel");
 const observer = new IntersectionObserver((entries) => {
@@ -22,25 +23,18 @@ hiddenText.forEach(el => observer.observe(el));
 /* Above is the text animation loading thing */
 
 window.addEventListener("scroll", (e) => {
-  const introTriggerRect = introductionSection.getBoundingClientRect();
-  const booksTriggerRect = booksSection.getBoundingClientRect();
-  const introIsInView = introTriggerRect.top < (window.innerHeight * 0.5) && introTriggerRect.bottom > 0;
-  const booksIsInView = booksTriggerRect.top < (window.innerHeight * 0.5) && booksTriggerRect.bottom > 0;
+  const headerTriggerRect = header.getBoundingClientRect();
+  const headerIsInView = headerTriggerRect.top < (window.innerHeight * 0.5) && headerTriggerRect.bottom > 0;
 
-  if (introIsInView) {
-    navText.forEach((link) => {
-      link.style.color = "rgba(160, 170, 255)";
-      link.style.textShadow = "0px 0px 3px rgba(120, 0, 170)";
-    });
-  } else if (booksIsInView) {
-    navText.forEach((link) => {
-      link.style.color = "white";
-      link.style.textShadow = "0px 0px 3px ghostwhite";
-    });
-  } else {
+  if (headerIsInView) {
     navText.forEach((link) => {
       link.style.color = "skyblue";
       link.style.textShadow = "0px 0px 3px skyblue";
+    });
+  } else {
+    navText.forEach((link) => {
+      link.style.color = "white";
+      link.style.textShadow = "0px 0px 3px ghostwhite";
     });
   }
 });
