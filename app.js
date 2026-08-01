@@ -9,7 +9,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:page', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', `pages/${req.params.page}.html`))
+  res.sendFile(path.join(__dirname, 'public', `pages/${req.params.page}.html`));
+});
+
+app.get('/books/:book', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', `pages/books/${req.params.book}.html`));
 });
 
 app.listen(6700, () => {

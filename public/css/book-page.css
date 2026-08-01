@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, black 15%, #6495ED);
+  color: white;
+}
+
+main {
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 45px;
+}
+
+img:first-of-type {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 20px;
+  font-family: Fredoka;
+}
+
+p::first-letter {
+  margin-left: 50px;
+}
+
+@media (max-width: 1450px) {
+  img:first-of-type {
+    width: 85%;
+  }
+}
