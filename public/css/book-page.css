@@ -16,16 +16,20 @@ h1 {
 
 img:first-of-type {
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 p {
-  font-size: 20px;
-  font-family: Fredoka;
+  margin-left: 20px;
+  font-size: 25px;
+  font-family: Comic Sans MS;
+  width: 85%;
 }
 
-p::first-letter {
-  margin-left: 50px;
+h3 {
+  margin-left: 20px;
+  font-size: 27px;
+  font-family: Arial;
 }
 
 @media (max-width: 1450px) {
