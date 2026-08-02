@@ -239,6 +239,12 @@ h1 {
 
 svg {
   color: white !important;
+  transition-duration: 300ms;
+  animation-timing-function: ease-in;
+}
+
+svg:hover {
+  transform: translateY(-5px);
 }
 
 button#openNav {

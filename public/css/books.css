@@ -96,6 +96,29 @@ canvas {
     0 0 20px rgba(120, 90, 255, .4);
 }
 
+li {
+  transition-duration: 0.3s;
+}
+
+li:hover {
+  text-shadow: 0px 0px 2px white;
+  transform: translateY(-5px);
+}
+
+.handles * {
+  margin: 0 3px;
+}
+
+svg {
+  color: white;
+  transition-duration: 300ms;
+  animation-timing-function: ease-in;
+}
+
+svg:hover {
+  transform: translateY(-5px);
+}
+
 @media (max-width: 2000px) {
   section {
     grid-template-columns: repeat(3, 350px);
