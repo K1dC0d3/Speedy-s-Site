@@ -6,6 +6,7 @@ body {
 }
 
 main {
+  display: flex;
   padding-left: 20px;
 }
 
@@ -15,7 +16,7 @@ h1 {
 }
 
 img:first-of-type {
-  margin-top: 20px;
+  margin: 20px 0;
   border-radius: 15px;
   width: 75%;
 }
@@ -33,8 +34,64 @@ h3 {
   font-family: Arial;
 }
 
+section.book-details {
+  padding: 20px;
+  min-width: 20vw;
+  margin: 20px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+section.book-details>h2 {
+  font-family: Roboto;
+}
+
+section.book-details>p {
+  margin: 0;
+  font-family: Nunito;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 20px;
+}
+
+.divider span {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, .4),
+      rgba(255, 255, 255, .8));
+}
+
+.divider span:last-child {
+  background: linear-gradient(to left,
+      transparent,
+      rgba(255, 255, 255, .4),
+      rgba(255, 255, 255, .8));
+}
+
+.star {
+  color: #d9c5ff;
+  font-size: 1.3rem;
+  text-shadow:
+    0 0 8px rgba(180, 120, 255, .7),
+    0 0 20px rgba(120, 90, 255, .4);
+}
+
 @media (max-width: 1450px) {
   img:first-of-type {
     width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  section.book-details {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 65%;
   }
 }

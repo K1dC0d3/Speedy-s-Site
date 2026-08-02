@@ -34,6 +34,10 @@ div.book>img {
   width: 300px;
 }
 
+div.book>p {
+  font-size: 1.3rem;
+}
+
 div.book>img:hover {
   transform: scale(1.05);
 }
@@ -117,6 +121,20 @@ svg {
 
 svg:hover {
   transform: translateY(-5px);
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1.2s;
+  transition-timing-function: ease-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 @media (max-width: 2000px) {
