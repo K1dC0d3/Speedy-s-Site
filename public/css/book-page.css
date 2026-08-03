@@ -138,6 +138,12 @@ div.character>h2 {
   }
 }
 
+@media (max-width: 900px) {
+  div.book>img {
+    width: 27vw !important;
+  }
+}
+
 @media (max-width: 700px) {
   section.book-details {
     margin: 20px 0;
@@ -146,6 +152,6 @@ div.character>h2 {
   }
 
   div.book>img {
-    width: 35vw !important;
+    width: 33vw !important;
   }
 }
