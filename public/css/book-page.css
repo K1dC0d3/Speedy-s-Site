@@ -122,6 +122,10 @@ div.book>img {
   width: 300px;
 }
 
+div.book>img:hover {
+  transform: scale(1.05);
+}
+
 div.character>img {
   border-radius: 25px;
   width: 220px;

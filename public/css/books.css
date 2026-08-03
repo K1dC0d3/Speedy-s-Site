@@ -42,10 +42,6 @@ div.book>img:hover {
   transform: scale(1.05);
 }
 
-div.book>img:hover+p {
-  text-shadow: 0px 0px 5px white;
-}
-
 main {
   padding-top: 20px;
 }
