@@ -155,7 +155,8 @@ div.character>h2 {
     width: 65%;
   }
 
-  div.book>img {
+  div.book>img,
+  div.character>img {
     width: 33vw !important;
   }
 }
