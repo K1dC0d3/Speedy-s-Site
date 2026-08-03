@@ -144,4 +144,8 @@ div.character>h2 {
     background: rgba(0, 0, 0, 0.3);
     width: 65%;
   }
+
+  div.book>img {
+    width: 35vw !important;
+  }
 }
