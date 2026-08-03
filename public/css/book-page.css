@@ -82,6 +82,32 @@ section.book-details>p {
     0 0 20px rgba(120, 90, 255, .4);
 }
 
+.more-story {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+
+.more-story.open {
+  max-height: 3000px;
+}
+
+button#read-more {
+  margin: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+button#read-more:hover {
+  transform: translateY(-2px);
+}
+
 @media (max-width: 1450px) {
   img:first-of-type {
     width: 80%;

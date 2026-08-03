@@ -21,8 +21,8 @@
       <img id="bookCover" src="../../assets/IMG-20260710-WA0045.jpg" alt="">
       <h1 class="fw-bold">The Imagination</h1>
       <h2 style="font-family: Nunito;">A world where imagination becomes reality</h2>
-      <a class="text-decoration-none text-white fs-3" href="https://www.wattpad.com/story/410113904-the-imagination"
-        target="_blank">Check it out on <span style="color: orange">Wattpad</span></a>
+      <a class="text-white fs-3" href="https://www.wattpad.com/story/410113904-the-imagination" target="_blank">Check it
+        out on <span style="color: orange">Wattpad</span></a>
       <div id="mobile"></div>
       <div class="divider">
         <span></span>
@@ -37,51 +37,60 @@
         a
         collective manifestation of human imagination.</p>
 
-      <p>There, they meet Cerebella, the central intelligence of ImagiCore, who reveals that they have been chosen as
-        Guardians because their minds are uniquely compatible with imaginative construction.
-        As Guardians, the teenagers undergo training to use a system that allows them to manifest tools and weapons from
-        their thoughts.</p>
+      <div class="more-story">
+        <p>There, they meet Cerebella, the central intelligence of ImagiCore, who reveals that they have been chosen as
+          Guardians because their minds are uniquely compatible with imaginative construction.
+          As Guardians, the teenagers undergo training to use a system that allows them to manifest tools and weapons
+          from
+          their thoughts.</p>
 
-      <p>They are assigned operational codenames to protect their identities: Jayden (Joshua), Kara (Ifeoma), Iris
-        (Eva),
-        Viper (Setemi), Nikki (Doyin), and Skylar (David)</p>
+        <p>They are assigned operational codenames to protect their identities: Jayden (Joshua), Kara (Ifeoma), Iris
+          (Eva),
+          Viper (Setemi), Nikki (Doyin), and Skylar (David)</p>
 
-      <p>Their primary mission is to protect the Imaginarium from The Reality, a mysterious group that views imagination
-        as a flaw and seeks to delete it to create a fixed, controlled reality</p>
+        <p>Their primary mission is to protect the Imaginarium from The Reality, a mysterious group that views
+          imagination
+          as a flaw and seeks to delete it to create a fixed, controlled reality</p>
 
-      <h3>The plot is centered around two major missions:</h3>
+        <h3>The plot is centered around two major missions:</h3>
 
-      <p>Mission 1: The Loop (Zoe): The Guardians travel via the Mind Glider to the mindscape of a girl named Zoe, which
-        is stuck in a repetitive loop due to her grief over her father's death.
-        <br>
-        They battle monsters representing her anxiety, anger, and depression.
-      </p>
+        <p>Mission 1: The Loop (Zoe): The Guardians travel via the Mind Glider to the mindscape of a girl named Zoe,
+          which
+          is stuck in a repetitive loop due to her grief over her father's death.
+          <br>
+          They battle monsters representing her anxiety, anger, and depression.
+        </p>
 
-      <p>Eventually, they reach Zoe’s consciousness and help her stabilize her world by encouraging her to take "one
-        step"
-        at a time to process her grief.</p>
+        <p>Eventually, they reach Zoe’s consciousness and help her stabilize her world by encouraging her to take "one
+          step"
+          at a time to process her grief.</p>
 
-      <p>Mission 2: The City of Ideas (Pizzy B): They are tasked with saving the mindscape of Pizzy B, a world-famous
-        young creator whose "City of Ideas" is collapsing due to his fear of failure following online criticism.</p>
+        <p>Mission 2: The City of Ideas (Pizzy B): They are tasked with saving the mindscape of Pizzy B, a world-famous
+          young creator whose "City of Ideas" is collapsing due to his fear of failure following online criticism.</p>
 
-      <p>To combat this "creative collapse," the group activates Hero Mode, which grants them unique superpowers: Jayden
-        (electricity), Kara (artistic construction), Skylar (super speed), Iris (wind), Viper (primal
-        enhancement/strength), and Nikki (spectral phasing/flight)</p>
+        <p>To combat this "creative collapse," the group activates Hero Mode, which grants them unique superpowers:
+          Jayden
+          (electricity), Kara (artistic construction), Skylar (super speed), Iris (wind), Viper (primal
+          enhancement/strength), and Nikki (spectral phasing/flight)</p>
 
-      <p>The climax occurs when The Reality agents arrive at Pizzy B’s mindscape to delete it.
-        <br>
-        These agents use a devastating ability called "Sever" to disconnect the Guardians from their powers.
-        <br>
-        Despite a desperate attempt by Jayden to stop them, the mission fails; the Reality agents successfully delete
-        Pizzy B’s imagination, leaving his real-world body in a coma
-      </p>
+        <p>The climax occurs when The Reality agents arrive at Pizzy B’s mindscape to delete it.
+          <br>
+          These agents use a devastating ability called "Sever" to disconnect the Guardians from their powers.
+          <br>
+          Despite a desperate attempt by Jayden to stop them, the mission fails; the Reality agents successfully delete
+          Pizzy B’s imagination, leaving his real-world body in a coma
+        </p>
 
-      <p>The book ends with a major twist: back at school, two classmates, Simi and Michael, accidentally witness the
-        Guardians emerging from the portal</p>
+        <p>The book ends with a major twist: back at school, two classmates, Simi and Michael, accidentally witness the
+          Guardians emerging from the portal</p>
 
-      <p>Furthermore, it is revealed that The Reality agents are actually four other girls from their school — Moyo,
-        Jomiloju, Ogo, and Yonu—who are working for a masked figure at a company called Aurelion Technologies
-        Their school principal is also revealed to be an accomplice, helping to hide their absences during missions</p>
+        <p>Furthermore, it is revealed that The Reality agents are actually four other girls from their school — Moyo,
+          Jomiloju, Ogo, and Yonu—who are working for a masked figure at a company called Aurelion Technologies
+          Their school principal is also revealed to be an accomplice, helping to hide their absences during missions
+        </p>
+      </div>
+
+      <button id="read-more" onclick="toggleStory()">Read More</button>
       <section>
         <h1>If you liked this, you'll like:</h1>
         <div class="book">
@@ -133,6 +142,17 @@
         desktopView.appendChild(bookDetails);
       }
     });
+
+    function toggleStory() {
+      const story = document.querySelector("div.more-story");
+      const button = document.querySelector("button#read-more");
+
+      story.classList.toggle("open");
+
+      button.textContent = story.classList.contains("open")
+        ? "Read Less"
+        : "Read More";
+    }
   </script>
 </body>
 
