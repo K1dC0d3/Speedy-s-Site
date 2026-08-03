@@ -77,7 +77,7 @@
 
       <button id="read-more" onclick="toggleStory()">Read More</button>
       <section>
-        <h1>Characters involved:</h1>
+        <h1 style="font-family: Nunito;">Characters involved:</h1>
         <div class="d-flex gap-4 flex-wrap">
           <a href="../characters/jayden" class="text-decoration-none">
             <div class="character">
@@ -122,7 +122,7 @@
         </div>
       </section>
       <section>
-        <h1>If you liked this, you'll like:</h1>
+        <h1 class="mt-3" style="font-family: Nunito;">If you liked this, you'll like:</h1>
         <div class="d-flex gap-4 flex-wrap">
           <a href="../books/the-imagination-the-reality-seed" class="text-decoration-none">
             <div class="book">
@@ -164,43 +164,7 @@
 
 
 
-  <script>
-    const bookCover = document.getElementById("bookCover");
-    const mobileView = document.getElementById("mobile");
-    const desktopView = document.getElementById("desktop");
-    const bookDetails = document.querySelector("section.book-details");
-
-    responsive();
-
-    window.addEventListener("resize", () => {
-      responsive();
-    });
-
-    function responsive() {
-      if (window.innerWidth < 800) {
-        bookCover.setAttribute("src", "../../assets/IMG-20260710-WA0044.jpg");
-      } else {
-        bookCover.setAttribute("src", "../../assets/IMG-20260710-WA0045.jpg");
-      }
-
-      if (window.innerWidth <= 700) {
-        mobileView.appendChild(bookDetails);
-      } else {
-        desktopView.appendChild(bookDetails);
-      }
-    }
-
-    function toggleStory() {
-      const story = document.querySelector("div.more-story");
-      const button = document.querySelector("button#read-more");
-
-      story.classList.toggle("open");
-
-      button.textContent = story.classList.contains("open")
-        ? "Read Less"
-        : "Read More";
-    }
-  </script>
+  <script src="../../js/book-page.js"></script>
 </body>
 
 </html>
