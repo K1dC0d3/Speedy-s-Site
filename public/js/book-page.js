@@ -10,12 +10,6 @@ window.addEventListener("resize", () => {
 });
 
 function responsive() {
-  if (window.innerWidth < 800) {
-    bookCover.setAttribute("src", "../../assets/IMG-20260710-WA0044.jpg");
-  } else {
-    bookCover.setAttribute("src", "../../assets/IMG-20260710-WA0045.jpg");
-  }
-
   if (window.innerWidth <= 700) {
     mobileView.appendChild(bookDetails);
   } else {
