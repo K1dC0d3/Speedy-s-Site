@@ -108,6 +108,30 @@ button#read-more:hover {
   transform: translateY(-2px);
 }
 
+div.book {
+  text-align: center;
+  color: white;
+  width: min-content
+}
+
+div.book>img {
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0px 0px 15px black;
+  transition-duration: 0.5s;
+  width: 300px;
+}
+
+div.character>img {
+  border-radius: 25px;
+  width: 220px;
+  margin: 0;
+}
+
+div.character>h2 {
+  text-align: center;
+}
+
 @media (max-width: 1450px) {
   img:first-of-type {
     width: 80%;

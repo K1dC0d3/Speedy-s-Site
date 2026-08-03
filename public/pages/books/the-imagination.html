@@ -93,9 +93,15 @@
       <button id="read-more" onclick="toggleStory()">Read More</button>
       <section>
         <h1>If you liked this, you'll like:</h1>
-        <div class="book">
-          <img src="" alt="">
-          <h2></h2>
+        <div class="d-flex gap-2">
+          <div class="book">
+            <img src="../../assets/IMG-20260729-WA0010.jpg" alt="">
+            <h2>The Imagination:<br>The Reality Seed</h2>
+          </div>
+          <div class="book">
+            <img src="../../assets/IMG-20260728-WA0002.jpg" alt="">
+            <h2>Hero Force:<br>The Origin</h2>
+          </div>
         </div>
       </section>
     </section>
@@ -129,7 +135,14 @@
     const mobileView = document.getElementById("mobile");
     const desktopView = document.getElementById("desktop");
     const bookDetails = document.querySelector("section.book-details");
+
+    responsive();
+
     window.addEventListener("resize", () => {
+      responsive();
+    });
+
+    function responsive() {
       if (window.innerWidth < 800) {
         bookCover.setAttribute("src", "../../assets/IMG-20260710-WA0044.jpg");
       } else {
@@ -141,7 +154,7 @@
       } else {
         desktopView.appendChild(bookDetails);
       }
-    });
+    }
 
     function toggleStory() {
       const story = document.querySelector("div.more-story");

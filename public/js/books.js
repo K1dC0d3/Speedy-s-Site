@@ -6,6 +6,14 @@ const particleCount =
     window.innerWidth > 768 ? 70 :
       35;
 
+// Smooth parallax variables
+let targetScroll = window.scrollY;
+let currentScroll = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  targetScroll = window.scrollY;
+});
+
 function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -41,6 +49,21 @@ class Particle {
     ][Math.floor(Math.random() * 4)];
 
     this.offset = Math.random() * Math.PI * 2;
+
+    // -------- Premium effects --------
+
+    // How close the particle is to the camera
+    this.depth = Math.random() * 0.25 + 0.05;
+
+    // Bigger particles appear closer
+    this.radius *= 0.5 + this.depth * 2;
+
+    // Stronger glow for closer particles
+    this.shadow = 5 + this.depth * 35;
+
+    // Gentle side-to-side drifting
+    this.waveOffset = Math.random() * Math.PI * 2;
+    this.waveStrength = Math.random() * 8 + 2;
   }
 
   update(time) {
@@ -60,18 +83,27 @@ class Particle {
     this.alpha += Math.sin(time * 0.001 + this.offset) * 0.002;
   }
 
-  draw() {
+  draw(time) {
 
     ctx.save();
 
     ctx.globalAlpha = this.alpha;
 
+    const drawX =
+      this.x +
+      Math.sin(time * 0.0004 + this.waveOffset) *
+      this.waveStrength;
+
+    const drawY =
+      this.y -
+      currentScroll * this.depth;
+
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.arc(drawX, drawY, this.radius, 0, Math.PI * 2);
 
     ctx.fillStyle = this.color;
 
-    ctx.shadowBlur = 15;
+    ctx.shadowBlur = this.shadow;
     ctx.shadowColor = this.color;
 
     ctx.fill();
@@ -86,11 +118,14 @@ for (let i = 0; i < particleCount; i++)
 
 function animate(time) {
 
+  // Smoothly follow the scroll position
+  currentScroll += (targetScroll - currentScroll) * 0.08;
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach(particle => {
     particle.update(time);
-    particle.draw();
+    particle.draw(time);
   });
 
   requestAnimationFrame(animate);
