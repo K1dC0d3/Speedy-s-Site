@@ -142,4 +142,12 @@ const observer = new IntersectionObserver((entries) => {
 });
 hiddenElements.forEach((el) => observer.observe(el));
 
+// Removes added unblur delay on books for smaller books
+if (window.innerWidth < 800) {
+  const books = document.querySelectorAll(".book");
+  books.forEach((book) => {
+    book.style.transitionDelay = "0s";
+  });
+}
+
 animate();
