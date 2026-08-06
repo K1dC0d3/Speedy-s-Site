@@ -135,6 +135,16 @@ svg:hover {
 
 @media (max-width: 2000px) {
   section {
+    grid-template-columns: repeat(4, 350px);
+  }
+
+  div.book>img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1500px) {
+  section {
     grid-template-columns: repeat(3, 350px);
   }
 
@@ -171,7 +181,7 @@ svg:hover {
   }
 
   div.book>img {
-    width: 50vw;
+    width: 60vw;
   }
 
   main>h1 {
