@@ -14,72 +14,60 @@
 <body>
   <canvas id="particles"></canvas>
   <main>
-    <h1>The Imagination Series</h1>
-    <section class="the-imagination">
-      <a href="./characters/jayden" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0046.jpg" alt="">
-          <h2>Jayden</h2>
-        </div>
-      </a>
-      <a href="./characters/kara" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0047.jpg" alt="">
-          <h2>Kara</h2>
-        </div>
-      </a>
-      <a href="./characters/skylar" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0048.jpg" alt="">
-          <h2>Skylar</h2>
-        </div>
-      </a>
-      <a href="./characters/iris" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0049.jpg" alt="">
-          <h2>Iris</h2>
-        </div>
-      </a>
-      <a href="./characters/viper" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0050.jpg" alt="">
-          <h2>Viper</h2>
-        </div>
-      </a>
-      <a href="./characters/nikki" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0051.jpg" alt="">
-          <h2>Nikki</h2>
-        </div>
-      </a>
-      <a href="./characters/ryder" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0052.jpg" alt="">
-          <h2>Ryder</h2>
-        </div>
-      </a>
-      <a href="./characters/zikkorah" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260710-WA0053.jpg" alt="">
-          <h2>Zikkorah</h2>
-        </div>
-      </a>
-    </section>
-    <h1>Hero Force Series</h1>
-    <section class="hero-force">
-      <a href="./characters/llyod" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260728-WA0009.jpg" alt="">
-          <h2>Lloyd</h2>
-        </div>
-      </a>
-      <a href="./characters/llyod" class="text-decoration-none text-white text-center">
-        <div class="character hidden">
-          <img src="../assets/IMG-20260728-WA0009.jpg" alt="">
-          <h2>Lloyd</h2>
-        </div>
-      </a>
-    </section>
+    <div class="carousel">
+      <div class="slide-dots">
+        <button class="active"></button>
+        <button></button>
+      </div>
+      <div class="pages">
+        <section class="the-imagination">
+          <h1>The Imagination Series</h1>
+          <div class="character hidden" data-id="jayden">
+            <img src="../assets/IMG-20260710-WA0046.jpg" alt="">
+            <h2>Jayden</h2>
+          </div>
+          <div class="character hidden" data-id="kara">
+            <img src="../assets/IMG-20260710-WA0047.jpg" alt="">
+            <h2>Kara</h2>
+          </div>
+          <div class="character hidden" data-id="skylar">
+            <img src="../assets/IMG-20260710-WA0048.jpg" alt="">
+            <h2>Skylar</h2>
+          </div>
+          <div class="character hidden" data-id="iris">
+            <img src="../assets/IMG-20260710-WA0049.jpg" alt="">
+            <h2>Iris</h2>
+          </div>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260710-WA0050.jpg" alt="">
+            <h2>Viper</h2>
+          </div>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260710-WA0051.jpg" alt="">
+            <h2>Nikki</h2>
+          </div>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260710-WA0052.jpg" alt="">
+            <h2>Ryder</h2>
+          </div>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260710-WA0053.jpg" alt="">
+            <h2>Zikkorah</h2>
+          </div>
+        </section>
+        <section class="hero-force">
+          <h1>Hero Force Series</h1>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260728-WA0009.jpg" alt="">
+            <h2>Lloyd</h2>
+          </div>
+          <div class="character hidden">
+            <img src="../assets/IMG-20260728-WA0009.jpg" alt="">
+            <h2>Lloyd</h2>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
   <footer class="d-flex align-items-center flex-column mt-5 pt-5">
     <h2 class="text-white mb-5">Speed Verse Entertainment</h2>
@@ -138,6 +126,7 @@
       talk</a>
   </footer>
   <script src="../js/books.js"></script>
+  <script src="../js/characters.js"></script>
 </body>
 
 </html>
