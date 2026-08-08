@@ -142,6 +142,7 @@ svg:hover {
 }
 
 .character-card {
+  position: relative;
   width: 90vw;
   max-height: 90vh;
 
@@ -149,11 +150,7 @@ svg:hover {
 
   border-radius: 20px;
   background: black;
-  padding: 20px 0 20px 20px;
-}
-
-.character-card p {
-  width: 70%;
+  padding: 20px;
 }
 
 .character-card img {
@@ -162,8 +159,20 @@ svg:hover {
   margin-right: 50px;
 }
 
+.character-card p {
+  font-size: 1.5rem;
+}
+
 .info {
   font-family: Nunito, Comic Sans MS;
+}
+
+#exit-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  background: none;
 }
 
 @media (max-width: 1400px) {
@@ -193,6 +202,21 @@ svg:hover {
 
   div.character>img {
     width: 35vw;
+  }
+
+  /* Popup modifications */
+
+  .popup-content {
+    flex-direction: column;
+  }
+
+  .character-card p {
+    width: 100%;
+  }
+
+  .character-card img {
+    margin-right: 0px;
+    width: min-content;
   }
 }
 
