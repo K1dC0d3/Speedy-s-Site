@@ -1,43 +1,77 @@
 let startX = 0;
-let endX = 0;
+let currentPage = 0;
 let isDragging = false;
 let hasMoved = false;
-let currentPage = 0;
 
 const pages = document.querySelector(".pages");
 const dots = document.querySelectorAll(".slide-dots button");
 const carousel = document.querySelector(".carousel");
 
-carousel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
+carousel.addEventListener("pointerdown", (e) => {
+  startX = e.clientX;
+  isDragging = true;
+  hasMoved = false;
 });
 
-carousel.addEventListener("touchmove", (e) => {
-  endX = e.touches[0].clientX;
-});
+carousel.addEventListener("pointermove", (e) => {
+  if (!isDragging) return;
 
-carousel.addEventListener("touchend", () => {
-  if (!isDragging) {
-    let difference = startX - endX;
+  const distance = e.clientX - startX;
 
-    // Swiped left
-    if (difference > 50) {
-      currentPage++;
-
-      goToPage(currentPage);
-    }
-
-    // Swiped right
-    if (difference < -50) {
-      currentPage--;
-
-      if (currentPage < 0) {
-        currentPage = 0;
-      }
-
-      goToPage(currentPage);
-    }
+  if (Math.abs(distance) > 10) {
+    hasMoved = true;
   }
+});
+
+carousel.addEventListener("pointerup", (e) => {
+  if (!isDragging) return;
+
+  const distance = startX - e.clientX;
+
+  if (Math.abs(distance) >= 50) {
+    if (distance > 0) {
+      currentPage++;
+    } else {
+      currentPage--;
+    }
+
+    currentPage = Math.max(
+      0,
+      Math.min(currentPage, pages.children.length - 1)
+    );
+
+    goToPage(currentPage);
+  }
+
+  isDragging = false;
+});
+
+carousel.addEventListener("pointercancel", () => {
+  isDragging = false;
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentPage = index;
+    goToPage(currentPage);
+  });
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    currentPage--;
+  } else if (e.key === "ArrowRight") {
+    currentPage++;
+  } else {
+    return;
+  }
+
+  currentPage = Math.max(
+    0,
+    Math.min(currentPage, pages.children.length - 1)
+  );
+
+  goToPage(currentPage);
 });
 
 let autoSlide = setInterval(() => {
@@ -50,60 +84,52 @@ let autoSlide = setInterval(() => {
   goToPage(currentPage);
 }, 10000);
 
-carousel.addEventListener("pointerdown", (e) => {
-  if (e.pointerType !== "mouse") return;
-
-  startX = e.clientX;
-  endX = startX;
-  isDragging = true;
-});
-
-carousel.addEventListener("pointermove", (e) => {
-  if (!isDragging) return;
-
-  endX = e.clientX;
-});
-
-carousel.addEventListener("pointerup", () => {
-  if (!isDragging) return;
-
-  let distance = startX - endX;
-
-  if (Math.abs(distance) >= 50) {
-    if (distance > 0) {
-      currentPage++;
-    } else {
-      currentPage--;
-    }
-
-    currentPage = Math.max(0, Math.min(currentPage, pages.children.length - 1));
-
-    goToPage(currentPage);
-  }
-
-  isDragging = false;
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key == "ArrowLeft") {
-    currentPage--;
-  } else if (e.key == "ArrowRight") {
-    currentPage++;
-  }
-  currentPage = Math.max(0, Math.min(currentPage, pages.children.length - 1));
-  goToPage(currentPage);
-});
-
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    goToPage(index);
-  });
-});
-
 function goToPage(current) {
   pages.style.transform = `translateX(-${current * 100}%)`;
 
   dots.forEach(dot => dot.classList.remove("active"));
-  dots[current].classList.add("active");
+
+  if (dots[current]) {
+    dots[current].classList.add("active");
+  }
 }
 
+let characters = [];
+const body = document.querySelector("body");
+const characterModal = document.querySelector(".character-modal");
+const characterCard = document.querySelector(".character-card");
+const characterImage = document.getElementById("characterImage");
+const characterRole = document.getElementById("characterRole");
+const characterName = document.getElementById("characterName");
+const characterBio = document.getElementById("characterBio");
+
+fetch("../data/characters.json")
+  .then(response => response.json())
+  .then(data => {
+
+    characters = data;
+
+  });
+
+document.querySelectorAll(".character").forEach(card => {
+  card.addEventListener("click", () => {
+    openCharacter(card.dataset.id);
+  });
+});
+
+function openCharacter(id) {
+  body.classList.add("modal-open");
+  characterModal.classList.add("open");
+
+  const character = characters.find(c => c.id === id);
+
+  characterImage.src = character.image;
+  characterName.textContent = character.name;
+  characterRole.textContent = character.role;
+  characterBio.textContent = character.bio;
+}
+
+function exitModal() {
+  body.classList.remove("modal-open");
+  characterModal.classList.add("open");
+}
