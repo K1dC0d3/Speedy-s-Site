@@ -5,10 +5,7 @@
     "role": "Guardian Leader",
     "bio": "Joshua serves as the leader of the Guardians, a role that reflects both his confidence and his willingness to take responsibility in difficult situations. In the real world, he is energetic, outspoken, and naturally takes initiative, often becoming the first to act when faced with uncertainty. Inside the Imaginarium, he transforms into Jayden, wielding the power of electricity and lightning in Hero Mode.<br><br>Joshua's greatest strength lies in his determination to protect others, but that same determination can sometimes lead him to act impulsively, believing that decisive action is always the best solution. Throughout the series, his journey focuses on growing from simply leading the team to truly earning their trust and learning that leadership also requires listening, patience and collaboration.",
     "image": "../assets/IMG-20260710-WA0046.jpg",
-    "abilities": [
-      "Electricity",
-      "Lightning"
-    ]
+    "abilities": ["Electricity", "Lightning"]
   },
 
   {
@@ -30,24 +27,16 @@
     "role": "Guardian",
     "bio": "David is known for his lively personality, confidence, and love for friendly debates, often bringing energy and humour to the group. In Hero Mode, he becomes Skylar, gaining extraordinary super speed that allows him to move faster than the eye can follow.<br><br>Skylar specialises in rescue operations, reconnaissance, and rapid response during missions. His speed enables him to protect civilians, scout dangerous environments, and assist teammates within seconds. Although he enjoys competition and rarely backs down from an argument, David consistently proves himself to be dependable whenever his team needs him most.",
     "image": "../assets/IMG-20260710-WA0048.jpg",
-    "abilities": [
-      "Super Speed",
-      "Rapid Response",
-      "Enhanced Reflexes"
-    ]
+    "abilities": ["Super Speed", "Rapid Response", "Enhanced Reflexes"]
   },
 
   {
-   "id": "iris",
+    "id": "iris",
     "name": "Jason Eva (Iris)",
     "role": "Guardian",
     "bio": "Eva approaches situations with curiosity and a thoughtful mindset, often asking questions that encourage the team to think more carefully about their decisions. As Iris, she commands the power of wind, allowing her to generate powerful gusts, control aerial movement, and provide support both offensively and defensively.<br><br>Her abilities frequently complement those of her teammates, whether slowing falls, stabilising collapsing structures, or controlling the battlefield from a distance. Eva's inquisitive nature makes her one of the team's strongest problem-solvers, reminding the Guardians that understanding a situation can be just as important as confronting it.",
     "image": "../assets/IMG-20260710-WA0049.jpg",
-    "abilities": [
-      "Wind Manipulation",
-      "Gust Generation",
-      "Aerial Control"
-    ]
+    "abilities": ["Wind Manipulation", "Gust Generation", "Aerial Control"]
   },
 
   {
@@ -56,11 +45,7 @@
     "role": "Guardian",
     "bio": "Quiet, observant, and disciplined, Setemi rarely speaks unless necessary. Behind his reserved personality, however, lies one of the team's greatest protectors. As Viper, he possesses an aura that enhances his physical abilities, alongside the ability to unleash an inner beast under his complete control, dramatically increasing his strength and combat capabilities.<br><br>Rather than representing a loss of control, Viper's beast form symbolises the power Setemi keeps restrained beneath his calm exterior. His unwavering composure and willingness to stand between danger and his teammates make him one of the Guardians' strongest frontline fighters.",
     "image": "../assets/IMG-20260710-WA0050.jpg",
-    "abilities": [
-      "Aura Enhancement",
-      "Beast Form",
-      "Enhanced Strength"
-    ]
+    "abilities": ["Aura Enhancement", "Beast Form", "Enhanced Strength"]
   },
 
   {
@@ -69,10 +54,100 @@
     "role": "Guardian",
     "bio": "Doyinsola combines intelligence with quiet courage, often noticing details that others overlook. As Nikki, she possesses Ghost Mode, granting her the ability to fly, phase through solid objects, or become invisible, though only one of these abilities can be used at a time.<br><br>Her unique powers make her invaluable during reconnaissance missions, allowing her to locate hidden consciousnesses and gather information beyond the reach of the rest of the team. Nikki's calm thinking under pressure has repeatedly allowed the Guardians to solve problems that brute force alone could never overcome.",
     "image": "../assets/IMG-20260710-WA0051.jpg",
+    "abilities": ["Flight", "Phasing", "Invisibility"]
+  },
+
+  {
+    "id": "ryder",
+    "name": "Adebisi Michael (Ryder)",
+    "role": "Guardian",
+    "bio": "Michael joins the Guardians in the second installment of the series after discovering the existence of the Imaginarium. His fascination with engineering, vehicles, and technology shapes his Hero Mode, where he becomes Ryder.<br><br>Ryder possesses advanced technological manipulation abilities, enabling him to instantly construct and reconfigure highly advanced machines. His signature creation is a futuristic combat vehicle capable of transforming into a powerful armoured suit equipped with jet propulsion, energy weapons, and multiple combat configurations. His inventive approach to technology allows him to adapt quickly to changing situations, making him one of the team's most versatile combat specialists.",
+    "image": "../assets/IMG-20260710-WA0052.jpg",
     "abilities": [
-      "Flight",
-      "Phasing",
-      "Invisibility"
+      "Tech Manipulation",
+      "Machine Construction",
+      "Armour Transformation"
     ]
+  },
+
+  {
+    "id": "zikkorah",
+    "name": "Ikuomola Simisola (Zikkorah)",
+    "role": "Guardian",
+    "bio": "Simisola is cheerful, expressive, and often brings warmth and humour to those around her. Although she enters the world of the Imaginarium with no prior experience, she quickly demonstrates remarkable courage when faced with extraordinary circumstances.<br><br>As Zikkorah, she gains the ability to fly freely, project powerful pink plasma energy blasts, and generate protective plasma force fields capable of shielding both herself and her teammates. While still learning to master her abilities, Zikkorah's optimism and determination allow her to adapt quickly, proving that courage is not the absence of fear but the willingness to act despite it.",
+    "image": "../assets/IMG-20260710-WA0053.jpg",
+    "abilities": ["Flight", "Plasma Blasts", "Plasma Forcefields"]
+  },
+
+  {
+    "id": "darkjustice",
+    "name": "Lloyd (Dark Justice)",
+    "role": "Team Leader",
+    "bio": "Lloyd (Dark Justice) is the idealistic leader of the team who has dreamt of being a hero since childhood, even when he was mocked as a \"Super Weirdo\" for wearing capes to school. Although he was initially perceived as having no powers, he eventually manifested immense physical strength and energy projection, culminating in devastating moves like the \"Justice Flash Cannon\" and \"Continental Crush\"",
+    "image": "../assets/IMG-20260728-WA0009.jpg",
+    "abilities": ["Super Strength", "Energy Projection"]
+  },
+
+  {
+    "id": "windstorm",
+    "name": "Korra (Wind Storm)",
+    "role": "Aerial Support",
+    "bio": "Korra (Wind Storm) is a cautious and level-headed tactician who manipulates wind and air currents. Drawing on her background as a pilot’s daughter, she often serves as the team’s aerial support and is instrumental in coordinating their defensive maneuvers",
+    "image": "../assets/IMG-20260728-WA0010.jpg",
+    "abilities": ["Wind Manipulation", "Air Currents"]
+  },
+
+  {
+    "id": "glaze",
+    "name": "Axel (Glaze)",
+    "role": "Guardian",
+    "bio": "Axel (Glaze) is a complex figure who originally entered the group as a spy from the Ice Kingdom but ultimately chose his friends over his mother’s destructive mission. He possesses mastery over ice and frost, allowing him to freeze entire environments and create intricate sub-zero structures to aid the team",
+    "image": "../assets/IMG-20260728-WA0011.jpg",
+    "abilities": ["Ice Manipulation", "Frost Generation", "Cryokinesis"]
+  },
+
+  {
+    "id": "flashfire",
+    "name": "Anna (Flash Fire)",
+    "role": "Offensive Specialist",
+    "bio": "Anna (Flash Fire) is a fiercely loyal hero with a sharp wit who commands fire and heat. She serves as the team's primary offensive force, capable of launching fireballs and thermal blasts, though she was initially skeptical of the supernatural fruit and the tree that granted her powers",
+    "image": "../assets/IMG-20260728-WA0012.jpg",
+    "abilities": ["Fire Manipulation", "Heat Manipulation", "Thermal Blasts"]
+  },
+
+  {
+    "id": "greenphantom",
+    "name": "Alex (Green Phantom)",
+    "role": "Intellectual Anchor",
+    "bio": "Alex (Green Phantom) is the group's intellectual anchor, once known as a \"teacher's pet\" before gaining the ability to fly and fire green plasma beams. He utilizes his analytical mind and energy manipulation to target enemy weak points and execute complex attacks like the \"New Galaxy Smash\"",
+    "image": "../assets/IMG-20260728-WA0013.jpg",
+    "abilities": ["Flight", "Plasma Beams", "Energy Manipulation"]
+  },
+
+  {
+    "id": "quicklightning",
+    "name": "Jay (Quick Lightning)",
+    "role": "Speedster",
+    "bio": "Jay (Quick Lightning) is an impulsive and humorous speedster who uses super speed and electricity to disorient and strike his enemies. While he uses jokes to deflect from the pain of his parents' separation, he is incredibly brave, once even tackling a missile mid-air to save his friends",
+    "image": "../assets/IMG-20260728-WA0014.jpg",
+    "abilities": ["Super Speed", "Electricity", "Speed Combat"]
+  },
+
+  {
+    "id": "gemstone",
+    "name": "Vallery (Gem Stone)",
+    "role": "Defensive Specialist",
+    "bio": "Vallery (Gem Stone) is a former outcast and artist who found inner strength through the control of earth and stone. She provides the team with essential defense by summoning rock walls and platforms, and she can project powerful shockwaves through the ground",
+    "image": "../assets/IMG-20260728-WA0015.jpg",
+    "abilities": ["Earth Manipulation", "Stone Creation", "Ground Shockwaves"]
+  },
+
+  {
+    "id": "blackshinobi",
+    "name": "Kenji (Black Shinobi)",
+    "role": "Stealth and Intelligence Specialist",
+    "bio": "Kenji (Black Shinobi) is a transfer student from Japan who serves as the team’s stealth and intelligence specialist. He is a master ninja who utilizes shadow-based movement and obsidian energy katanas to execute precise, high-speed strikes against unsuspecting foes",
+    "image": "../assets/IMG-20260728-WA0016.jpg",
+    "abilities": ["Shadow Movement", "Obsidian Katanas", "Stealth Combat"]
   }
 ]

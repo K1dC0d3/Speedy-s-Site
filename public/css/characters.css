@@ -3,6 +3,11 @@
   user-select: none;
 }
 
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,15 +31,21 @@ section {
   display: grid;
   width: 100vw;
   padding-left: 30px;
-  padding-top: 60px;
+  padding-top: 80px;
   position: relative;
   flex-shrink: 0;
+  justify-content: center;
 }
 
 section>h1 {
   position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
   font-size: 50px;
-  left: 45%;
+  text-align: center;
+  width: 100%;
 }
 
 div.character {
@@ -84,12 +95,6 @@ svg:hover {
   cursor: grabbing;
 }
 
-.slide-dots {
-  position: absolute;
-  left: 45vw;
-  bottom: 20px;
-}
-
 @media (max-width: 2000px) {
   section {
     grid-template-columns: repeat(4, 340px);
@@ -103,7 +108,7 @@ svg:hover {
 .slide-dots {
   position: absolute;
   z-index: 4;
-  bottom: 25px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -173,7 +178,7 @@ svg:hover {
   font-size: 2rem;
 }
 
-.popup-content>h1 {
+.popup-content h1 {
   font-family: Nunito, Comic Sans MS;
 }
 
@@ -248,8 +253,12 @@ svg:hover {
 }
 
 @media (max-width: 600px) {
-  main>h1 {
-    text-align: center;
-    margin: auto auto 30px auto !important;
+  section {
+    padding-top: 100px;
+  }
+
+  section>h1 {
+    top: 0;
+    font-size: 45px;
   }
 }
