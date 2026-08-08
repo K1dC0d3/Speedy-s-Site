@@ -26,6 +26,7 @@ section {
   display: grid;
   width: 100vw;
   padding-left: 30px;
+  padding-top: 60px;
   position: relative;
   flex-shrink: 0;
 }
@@ -33,6 +34,7 @@ section {
 section>h1 {
   position: absolute;
   font-size: 50px;
+  left: 45%;
 }
 
 div.character {
@@ -146,6 +148,22 @@ svg:hover {
   overflow-y: auto;
 
   border-radius: 20px;
+  background: black;
+  padding: 20px 0 20px 20px;
+}
+
+.character-card p {
+  width: 70%;
+}
+
+.character-card img {
+  height: 85vh;
+  border-radius: 15px;
+  margin-right: 50px;
+}
+
+.info {
+  font-family: Nunito, Comic Sans MS;
 }
 
 @media (max-width: 1400px) {

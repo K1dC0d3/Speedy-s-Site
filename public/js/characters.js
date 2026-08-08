@@ -102,6 +102,7 @@ const characterImage = document.getElementById("characterImage");
 const characterRole = document.getElementById("characterRole");
 const characterName = document.getElementById("characterName");
 const characterBio = document.getElementById("characterBio");
+const characterAbilities = document.getElementById("characterAbilities");
 
 fetch("../data/characters.json")
   .then(response => response.json())
@@ -122,14 +123,24 @@ function openCharacter(id) {
   characterModal.classList.add("open");
 
   const character = characters.find(c => c.id === id);
+  let abilities = "";
+
+  character.abilities.forEach((a, index) => {
+    if (index != character.abilities.length - 1) {
+      abilities += a + " • "
+    } else {
+      abilities += a;
+    }
+  });
 
   characterImage.src = character.image;
   characterName.textContent = character.name;
   characterRole.textContent = character.role;
-  characterBio.textContent = character.bio;
+  characterBio.innerHTML = character.bio;
+  characterAbilities.textContent = abilities;
 }
 
-function exitModal() {
+function exitPopup() {
   body.classList.remove("modal-open");
-  characterModal.classList.add("open");
+  characterModal.classList.remove("open");
 }

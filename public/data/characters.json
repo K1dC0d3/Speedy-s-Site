@@ -1,7 +1,6 @@
 [
   {
     "id": "jayden",
-    "series": "The Imagination",
     "name": "Aladesanmi Joshua (Jayden)",
     "role": "Guardian Leader",
     "bio": "Joshua serves as the leader of the Guardians, a role that reflects both his confidence and his willingness to take responsibility in difficult situations. In the real world, he is energetic, outspoken, and naturally takes initiative, often becoming the first to act when faced with uncertainty. Inside the Imaginarium, he transforms into Jayden, wielding the power of electricity and lightning in Hero Mode.<br><br>Joshua's greatest strength lies in his determination to protect others, but that same determination can sometimes lead him to act impulsively, believing that decisive action is always the best solution. Throughout the series, his journey focuses on growing from simply leading the team to truly earning their trust and learning that leadership also requires listening, patience and collaboration.",
@@ -14,8 +13,7 @@
 
   {
     "id": "kara",
-    "series": "The Imagination",
-    "name": "Ojie Ifeoma",
+    "name": "Ojie Ifeoma (Kara)",
     "role": "Guardian",
     "bio": "Ifeoma is one of the most creative members of the Guardians, possessing a calm and imaginative approach to solving problems. As Kara, her Hero Mode ability allows her to bring virtually any non-living object into existence using a magical paintbrush, making her one of the team's most versatile members.<br><br>Whether constructing bridges, shields, restraints, or entirely new structures in the middle of battle, Kara's creativity constantly turns impossible situations into manageable ones. Her practical thinking and artistic imagination make her an essential part of the team, often providing solutions that no one else would have considered.",
     "image": "../assets/IMG-20260710-WA0047.jpg",
@@ -28,8 +26,7 @@
 
   {
     "id": "skylar",
-    "series": "",
-    "name": "Gbolahan-Lowo David",
+    "name": "Gbolahan-Lowo David (Skylar)",
     "role": "Guardian",
     "bio": "David is known for his lively personality, confidence, and love for friendly debates, often bringing energy and humour to the group. In Hero Mode, he becomes Skylar, gaining extraordinary super speed that allows him to move faster than the eye can follow.<br><br>Skylar specialises in rescue operations, reconnaissance, and rapid response during missions. His speed enables him to protect civilians, scout dangerous environments, and assist teammates within seconds. Although he enjoys competition and rarely backs down from an argument, David consistently proves himself to be dependable whenever his team needs him most.",
     "image": "../assets/IMG-20260710-WA0048.jpg",
@@ -42,8 +39,7 @@
 
   {
    "id": "iris",
-    "series": "",
-    "name": "Jason Eva",
+    "name": "Jason Eva (Iris)",
     "role": "Guardian",
     "bio": "Eva approaches situations with curiosity and a thoughtful mindset, often asking questions that encourage the team to think more carefully about their decisions. As Iris, she commands the power of wind, allowing her to generate powerful gusts, control aerial movement, and provide support both offensively and defensively.<br><br>Her abilities frequently complement those of her teammates, whether slowing falls, stabilising collapsing structures, or controlling the battlefield from a distance. Eva's inquisitive nature makes her one of the team's strongest problem-solvers, reminding the Guardians that understanding a situation can be just as important as confronting it.",
     "image": "../assets/IMG-20260710-WA0049.jpg",
@@ -51,6 +47,32 @@
       "Wind Manipulation",
       "Gust Generation",
       "Aerial Control"
+    ]
+  },
+
+  {
+    "id": "viper",
+    "name": "Ajayi Setemi (Viper)",
+    "role": "Guardian",
+    "bio": "Quiet, observant, and disciplined, Setemi rarely speaks unless necessary. Behind his reserved personality, however, lies one of the team's greatest protectors. As Viper, he possesses an aura that enhances his physical abilities, alongside the ability to unleash an inner beast under his complete control, dramatically increasing his strength and combat capabilities.<br><br>Rather than representing a loss of control, Viper's beast form symbolises the power Setemi keeps restrained beneath his calm exterior. His unwavering composure and willingness to stand between danger and his teammates make him one of the Guardians' strongest frontline fighters.",
+    "image": "../assets/IMG-20260710-WA0050.jpg",
+    "abilities": [
+      "Aura Enhancement",
+      "Beast Form",
+      "Enhanced Strength"
+    ]
+  },
+
+  {
+    "id": "nikki",
+    "name": "Binuyo Doyinsola (Nikki)",
+    "role": "Guardian",
+    "bio": "Doyinsola combines intelligence with quiet courage, often noticing details that others overlook. As Nikki, she possesses Ghost Mode, granting her the ability to fly, phase through solid objects, or become invisible, though only one of these abilities can be used at a time.<br><br>Her unique powers make her invaluable during reconnaissance missions, allowing her to locate hidden consciousnesses and gather information beyond the reach of the rest of the team. Nikki's calm thinking under pressure has repeatedly allowed the Guardians to solve problems that brute force alone could never overcome.",
+    "image": "../assets/IMG-20260710-WA0051.jpg",
+    "abilities": [
+      "Flight",
+      "Phasing",
+      "Invisibility"
     ]
   }
 ]

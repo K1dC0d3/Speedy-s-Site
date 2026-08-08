@@ -8,6 +8,11 @@
   <meta name="description" content="Meet the main characters of The Speed Verse">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/characters.css">
 </head>
 
@@ -95,11 +100,27 @@
 
     <div class="character-modal">
       <div class="character-card text-white">
-        <img src="" alt="" id="characterImage">
-        <h1 id="characterName"></h1>
-        <h2 id="characterRole"></h2>
-        <h3 id="characterSeries"></h3>
-        <p id="characterBio"></p>
+        <div class="d-flex justify-content-evenly">
+          <img src="" alt="" id="characterImage">
+          <div style="width: 70%;">
+            <div>
+              <span>
+                <h2 class="info">Name:</h2>
+                <h1 id="characterName"></h1>
+              </span>
+              <span>
+                <h2 class="info">Role:</h2>
+                <h2 id="characterRole"></h2>
+              </span>
+              <span>
+                <h2 class="info">Abilities:</h2>
+                <h3 id="characterAbilities"></h3>
+              </span>
+            </div>
+
+            <p id="characterBio"></p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
