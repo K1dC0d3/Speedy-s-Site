@@ -31,7 +31,6 @@ section {
   display: grid;
   width: 100vw;
   gap: 2.5rem;
-  padding-left: 30px;
   padding-top: 80px;
   position: relative;
   flex-shrink: 0;
