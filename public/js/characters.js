@@ -82,7 +82,7 @@ let autoSlide = setInterval(() => {
   }
 
   goToPage(currentPage);
-}, 10000);
+}, 20000);
 
 function goToPage(current) {
   pages.style.transform = `translateX(-${current * 100}%)`;
