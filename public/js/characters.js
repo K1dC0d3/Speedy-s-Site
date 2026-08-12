@@ -122,6 +122,9 @@ function openCharacter(id) {
   body.classList.add("modal-open");
   characterModal.classList.add("open");
 
+  // Create a history entry for the open modal
+  history.pushState({ characterModal: true }, "");
+
   carousel.style.filter = "blur(5px)";
   characterCard.style.transform = "scale(1)";
 
@@ -130,7 +133,7 @@ function openCharacter(id) {
 
   character.abilities.forEach((a, index) => {
     if (index != character.abilities.length - 1) {
-      abilities += a + " • "
+      abilities += a + " • ";
     } else {
       abilities += a;
     }
@@ -143,10 +146,28 @@ function openCharacter(id) {
   characterAbilities.textContent = abilities;
 }
 
+
 function exitPopup() {
   characterCard.style.transform = "scale(0.9)";
-  setTimeout(console.log("wait"), 500);
+
   body.classList.remove("modal-open");
   characterModal.classList.remove("open");
   carousel.style.filter = "blur(0px)";
+
+  // Remove the modal's history entry
+  if (history.state?.characterModal) {
+    history.back();
+  }
 }
+
+
+// Phone/browser back button
+window.addEventListener("popstate", () => {
+  if (characterModal.classList.contains("open")) {
+    characterCard.style.transform = "scale(0.9)";
+
+    body.classList.remove("modal-open");
+    characterModal.classList.remove("open");
+    carousel.style.filter = "blur(0px)";
+  }
+});
