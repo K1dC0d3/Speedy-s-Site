@@ -251,10 +251,18 @@ button.navigation {
   border-radius: 20px;
   line-height: 2.0;
   z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
+  transition-duration: 0.3s;
+}
+
+button.navigation>span {
+  display: inline-block;
+  transform: translateY(-5px);
+}
+
+button.navigation:hover {
+  box-shadow: 0px 0px 5px white;
+  transform: scale(1.05) translateY(-50%) !important;
 }
 
 button#left {

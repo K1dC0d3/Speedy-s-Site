@@ -186,3 +186,17 @@ function buttonSwipe(right) {
 
   goToPage(currentPage);
 }
+
+const navigationButtons = document.querySelectorAll(".navigation");
+
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    navigationButtons.forEach(button => {
+      button.style.opacity = entry.isIntersecting ? 1 : 0;
+    });
+  });
+}, {
+  threshold: 0.4
+});
+
+observer2.observe(carousel);
