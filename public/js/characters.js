@@ -171,3 +171,18 @@ window.addEventListener("popstate", () => {
     carousel.style.filter = "blur(0px)";
   }
 });
+
+function buttonSwipe(right) {
+  if (right) {
+    currentPage++;
+  } else {
+    currentPage--;
+  }
+
+  currentPage = Math.max(
+    0,
+    Math.min(currentPage, pages.children.length - 1)
+  );
+
+  goToPage(currentPage);
+}

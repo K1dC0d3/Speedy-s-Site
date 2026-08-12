@@ -220,6 +220,33 @@ svg:hover {
   transform: translateY(0);
 }
 
+button.navigation {
+  position: fixed;
+  padding: 0 3px;
+  border: 1px solid skyblue;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 50px;
+  border-radius: 20px;
+  line-height: 2.0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+button#left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+
+button#right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+
 @media (max-width: 1400px) {
   section {
     grid-template-columns: repeat(3, min-content);
@@ -274,6 +301,10 @@ svg:hover {
 
   .character-card {
     overflow-y: auto;
+  }
+
+  button.navigation {
+    display: none;
   }
 }
 
