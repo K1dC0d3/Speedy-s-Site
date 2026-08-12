@@ -93,6 +93,7 @@ svg:hover {
   background: transparent;
   cursor: grab;
   position: relative;
+  transitoin: filter 1s ease;
 }
 
 .carousel:active {
@@ -137,17 +138,20 @@ svg:hover {
   position: fixed;
   inset: 0;
 
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 
   background: rgba(0, 0, 0, .75);
 
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .character-modal.open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .character-card {
@@ -164,6 +168,9 @@ svg:hover {
   box-shadow:
     0 0 40px rgba(168, 85, 247, 0.15),
     0 20px 80px rgba(0, 0, 0, 0.6);
+
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
 }
 
 .character-card img {
@@ -197,6 +204,20 @@ svg:hover {
 .character-details {
   max-height: 83vh;
   overflow-y: scroll;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1s;
+  transition-timing-function: ease-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 @media (max-width: 1400px) {

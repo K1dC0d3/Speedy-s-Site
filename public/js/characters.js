@@ -122,6 +122,9 @@ function openCharacter(id) {
   body.classList.add("modal-open");
   characterModal.classList.add("open");
 
+  carousel.style.filter = "blur(5px)";
+  characterCard.style.transform = "scale(1)";
+
   const character = characters.find(c => c.id === id);
   let abilities = "";
 
@@ -141,6 +144,9 @@ function openCharacter(id) {
 }
 
 function exitPopup() {
+  characterCard.style.transform = "scale(0.9)";
+  setTimeout(console.log("wait"), 500);
   body.classList.remove("modal-open");
   characterModal.classList.remove("open");
+  carousel.style.filter = "blur(0px)";
 }
