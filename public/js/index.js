@@ -162,12 +162,22 @@ const nav = document.querySelector("nav");
 
 function openNav() {
   nav.classList.add("appear");
+  history.pushState({ navOpen: true }, "");
 }
 
 function closeNav() {
   nav.classList.remove("appear");
+  if (history.state?.navOpen) {
+    history.back();
+  }
 }
 
 function moreBooks() {
   window.open("./books");
 }
+
+window.addEventListener("popstate", () => {
+  if (window.innerWidth <= 950) {
+    closeNav();
+  }
+});

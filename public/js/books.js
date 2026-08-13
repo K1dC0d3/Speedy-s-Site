@@ -151,3 +151,13 @@ if (window.innerWidth < 800) {
 }
 
 animate();
+
+document.querySelectorAll("section").forEach(section => {
+  Array.from(section.children).forEach((link, index) => {
+    const child = link.querySelector("div");
+
+    if (child) {
+      child.style.transitionDelay = `${index * 0.5}s`;
+    }
+  });
+});
