@@ -404,7 +404,7 @@ p.abt-desc {
     flex-direction: column;
     justify-content: normal;
     align-items: flex-start;
-    padding-right: 16px !important;
+    padding-left: 16px !important;
   }
 
   nav>ul>li>a {
