@@ -152,6 +152,14 @@ svg:hover {
   transform: translateY(0);
 }
 
+footer>img {
+  width: 70vw;
+  max-width: 450px;
+  border-radius: 15px;
+  z-index: 5;
+  margin-bottom: 25px;
+}
+
 @media (max-width: 2000px) {
   section {
     grid-template-columns: repeat(4, 350px);

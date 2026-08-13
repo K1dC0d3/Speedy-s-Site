@@ -9,11 +9,29 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:page', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', `pages/${req.params.page}.html`));
+  const filePath = path.join(__dirname, 'public', `pages/${req.params.page}.html`);
+
+  // Use a callback to catch missing file errors
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+    }
+  });
 });
 
 app.get('/books/:book', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', `pages/books/${req.params.book}.html`));
+  const filePath = path.join(__dirname, 'public', `pages/books/${req.params.book}.html`);
+
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+    }
+  });
+});
+
+// 404 Fallback Middleware (Must be placed AFTER all other routes)
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 app.listen(6700, () => {
