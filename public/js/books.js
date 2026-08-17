@@ -161,3 +161,32 @@ if (window.innerWidth < 800) {
     book.style.transitionDelay = "0s";
   });
 }
+
+const popup = document.getElementById("popup");
+const popupTitle = document.querySelector("div#popup>div>h2");
+const popupDescription = document.querySelector("div#popup>div>p");
+
+let upcomingProjects;
+
+fetch("../data/upcoming-projects.json")
+  .then(response => response.json())
+  .then(data => {
+    upcomingProjects = data;
+  });
+
+function bookPopup(bookNo) {
+  const book2 = upcomingProjects.find(b => b.id == bookNo);
+
+  popup.style.opacity = 1;
+  popup.style.visibility = "visible";
+  document.querySelector('body').style.overflowY = "hidden";
+
+  popupTitle.innerHTML = book2.title;
+  popupDescription.innerHTML = book2.description;
+}
+
+function closePopup() {
+  popup.style.opacity = 0;
+  popup.style.visibility = "hidden";
+  document.querySelector('body').style.overflowY = "scroll";
+}
