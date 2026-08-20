@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
 app.get('/:page', (req, res) => {
   const filePath = path.join(__dirname, 'public', `pages/${req.params.page}.html`);
 
