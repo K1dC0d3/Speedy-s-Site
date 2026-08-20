@@ -1,0 +1,53 @@
+?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://thespeedverse.vercel.app/</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/characters</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books/the-imagination</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books/the-imagination-the-reality-seed</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books/hero-force-the-origin</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books/hero-force-shadow-of-lyricus</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://thespeedverse.vercel.app/books/hero-force-frost-born-legacy</loc>
+       <lastmod>2018-10-20T01:46:40+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+</urlset>
